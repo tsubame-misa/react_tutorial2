@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import sequelize from "sequelize";
 import { Restaurant, Review, User } from "./models.js";
+//test comment
 
 const app = express();
 app.use(cors());
