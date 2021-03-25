@@ -7,6 +7,10 @@ import { Restaurant, Review, User } from "./models.js";
 const app = express();
 app.use(cors());
 
+app.get("/test", async (req, res) => {
+  res.json("hello");
+});
+
 app.get("/restaurants", async (req, res) => {
   const limit = +req.query.limit || 5;
   const offset = +req.query.offset || 0;
