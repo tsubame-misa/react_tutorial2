@@ -2,9 +2,7 @@ import Sequelize from "sequelize";
 
 const { DataTypes } = Sequelize;
 
-const url =
-  process.env.DATABASE_URL ||
-  "postgres://postgres:postgres@localhost:5432/review_app";
+const url = "postgres://postgres:xxxx@localhost:5433/ramen";
 export const sequelize = new Sequelize(url);
 
 export const User = sequelize.define(
@@ -19,7 +17,7 @@ export const User = sequelize.define(
       allowNull: false,
     },
   },
-  { underscored: true },
+  { underscored: true }
 );
 
 export const Restaurant = sequelize.define(
@@ -36,7 +34,7 @@ export const Restaurant = sequelize.define(
       type: DataTypes.TEXT,
     },
   },
-  { underscored: true },
+  { underscored: true }
 );
 
 export const Review = sequelize.define(
@@ -65,7 +63,7 @@ export const Review = sequelize.define(
       allowNull: false,
     },
   },
-  { underscored: true },
+  { underscored: true }
 );
 
 Restaurant.hasMany(Review);
