@@ -2,7 +2,7 @@ import Sequelize from "sequelize";
 
 const { DataTypes } = Sequelize;
 
-const url = "postgres://postgres:xxxx@localhost:5433/ramen";
+const url = "postgres://postgres:xxxxxx@localhost:5433/ramen";
 export const sequelize = new Sequelize(url);
 
 export const User = sequelize.define(
